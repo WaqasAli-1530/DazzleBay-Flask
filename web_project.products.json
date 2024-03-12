@@ -1,0 +1,396 @@
+[{
+  "_id": {
+    "$oid": "64bd623d4c86e33ddcc8f988"
+  },
+  "pic_url": "/static/prod_images/BreitlingNavitimer.jpg",
+  "category": "watches",
+  "gender": "male",
+  "prod_name": "Breitling",
+  "prod_decs": "A pilot's favorite, the Breitling Navitimer features a slide rule bezel for aviation-related calculations, epitomizing precision and aeronautical flair.",
+  "prod_price": "45"
+},
+{
+  "_id": {
+    "$oid": "64bd63d64c86e33ddcc8f989"
+  },
+  "pic_url": "/static/prod_images/BulgariSerpenti.jpg",
+  "category": "watches",
+  "gender": "male",
+  "prod_name": "Bulgari Serpenti",
+  "prod_decs": "Celebrating femininity and creativity, the Bulgari Serpenti showcases an exquisite serpent-inspired design, reflecting both elegance and boldness.",
+  "prod_price": "50"
+},
+{
+  "_id": {
+    "$oid": "64bd64b84c86e33ddcc8f98a"
+  },
+  "pic_url": "/static/prod_images/Patek-Philippe-Nautilus.jpg",
+  "category": "watches",
+  "gender": "male",
+  "prod_name": "Patek Philippe",
+  "prod_decs": "A pilot's favorite, the Breitling Navitimer features a slide rule beze…",
+  "prod_price": "38"
+},
+{
+  "_id": {
+    "$oid": "64bd65604c86e33ddcc8f98b"
+  },
+  "pic_url": "/static/prod_images/rolex.jpg",
+  "category": "watches",
+  "gender": "male",
+  "prod_name": "Rolex",
+  "prod_decs": "A legendary timepiece favored by adventurers and watch enthusiasts alike, the Rolex Submariner embodies rugged luxury and diving prowess.",
+  "prod_price": "51"
+},
+{
+  "_id": {
+    "$oid": "64bd66114c86e33ddcc8f98c"
+  },
+  "pic_url": "/static/prod_images/rolex-f.jpg",
+  "category": "watches",
+  "gender": "female",
+  "prod_name": "Rolex ",
+  "prod_decs": "A symbol of elegance and versatility, the Rolex Datejust blends refined design with precise timekeeping, making it a favorite among female connoisseurs.",
+  "prod_price": "30"
+},
+{
+  "_id": {
+    "$oid": "64bd669b4c86e33ddcc8f98d"
+  },
+  "pic_url": "/static/prod_images/sveston-f.jpg",
+  "category": "watches",
+  "gender": "female",
+  "prod_name": "Sveston",
+  "prod_decs": "A symbol of elegance and versatility, the Rolex Datejust blends refine…",
+  "prod_price": "34"
+},
+{
+  "_id": {
+    "$oid": "64bd67454c86e33ddcc8f98e"
+  },
+  "pic_url": "/static/prod_images/Tag.jpg",
+  "category": "watches",
+  "gender": "female",
+  "prod_name": "Tag Heuer",
+  "prod_decs": "Inspired by motorsport, the Tag Heuer Carrera combines sporty sophistication and precision, appealing to men with a passion for speed and style.",
+  "prod_price": "35"
+},
+{
+  "_id": {
+    "$oid": "64bd68264c86e33ddcc8f98f"
+  },
+  "pic_url": "/static/prod_images/titan.jpg",
+  "category": "watches",
+  "gender": "male",
+  "prod_name": "Titan",
+  "prod_decs": "A symbol of elegance and versatility, the Rolex Datejust blends refine…",
+  "prod_price": "47"
+},
+{
+  "_id": {
+    "$oid": "64bd68a94c86e33ddcc8f990"
+  },
+  "pic_url": "/static/prod_images/titan-f.jpg",
+  "category": "watches",
+  "gender": "female",
+  "prod_name": "Titan",
+  "prod_decs": "A symbol of elegance and versatility, the Rolex Datejust blends refine…",
+  "prod_price": "50"
+},
+{
+  "_id": {
+    "$oid": "64bec2f952881c860f692213"
+  },
+  "pic_url": "/static/prod_images/armanirock1.jpg",
+  "category": "clothes",
+  "gender": "male",
+  "prod_name": "Armani",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Armani, exuding timeless style and luxurious refinement.",
+  "prod_price": "40"
+},
+{
+  "_id": {
+    "$oid": "64bec52e52881c860f692214"
+  },
+  "pic_url": "/static/prod_images/armanirock2.jpg",
+  "category": "clothes",
+  "gender": "male",
+  "prod_name": "Armani",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Armani, exuding timeless st…",
+  "prod_price": "45"
+},
+{
+  "_id": {
+    "$oid": "64bec5b452881c860f692215"
+  },
+  "pic_url": "/static/prod_images/armanirock3.jpg",
+  "category": "clothes",
+  "gender": "male",
+  "prod_name": "Armani",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Armani, exuding timeless st…",
+  "prod_price": "43"
+},
+{
+  "_id": {
+    "$oid": "64bec60c52881c860f692216"
+  },
+  "pic_url": "/static/prod_images/armanizipperplain.jpg",
+  "category": "clothes",
+  "gender": "female",
+  "prod_name": "Armani",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Armani, exuding timeless st…",
+  "prod_price": "48"
+},
+{
+  "_id": {
+    "$oid": "64bec65f52881c860f692217"
+  },
+  "pic_url": "/static/prod_images/calvinkleinbasic.jpg",
+  "category": "clothes",
+  "gender": "female",
+  "prod_name": "calvin",
+  "prod_decs": "Elegantly sophisticated Italian fashion by calvin, exuding timeless st…",
+  "prod_price": "39"
+},
+{
+  "_id": {
+    "$oid": "64bec6d152881c860f692218"
+  },
+  "pic_url": "/static/prod_images/guccigray.jpg",
+  "category": "clothes",
+  "gender": "female",
+  "prod_name": "gucci",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Gucci, exuding timeless st…",
+  "prod_price": "48"
+},
+{
+  "_id": {
+    "$oid": "64bec71552881c860f692219"
+  },
+  "pic_url": "/static/prod_images/mangoblack.jpg",
+  "category": "clothes",
+  "gender": "male",
+  "prod_name": "MangoBlack",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Mangoblack, exuding timeless st…",
+  "prod_price": "41"
+},
+{
+  "_id": {
+    "$oid": "64bec77152881c860f69221a"
+  },
+  "pic_url": "/static/prod_images/mangofrockbasic.jpg",
+  "category": "clothes",
+  "gender": "female",
+  "prod_name": "Mango",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Mango, exuding timeless st…",
+  "prod_price": "45"
+},
+{
+  "_id": {
+    "$oid": "64bec7a352881c860f69221b"
+  },
+  "pic_url": "/static/prod_images/pradared.jpg",
+  "category": "clothes",
+  "gender": "female",
+  "prod_name": "Prada",
+  "prod_decs": "Elegantly sophisticated Italian fashion by Prada, exuding timeless st…",
+  "prod_price": "50"
+},
+{
+  "_id": {
+    "$oid": "64bec7cf52881c860f69221c"
+  },
+  "pic_url": "/static/prod_images/yvessaintlaurent.jpg",
+  "category": "clothes",
+  "gender": "female",
+  "prod_name": "Yves",
+  "prod_decs": "Elegantly sophisticated Italian fashion by YSL, exuding timeless st…",
+  "prod_price": "50"
+},
+{
+  "_id": {
+    "$oid": "64bec84d52881c860f69221d"
+  },
+  "pic_url": "/static/prod_images/channelbleumen.jpeg",
+  "category": "perfumes",
+  "gender": "male",
+  "prod_name": "Channel Bleu",
+  "prod_decs": "Chanel Bleu: A captivating and alluring blend of modern masculinity and classic elegance in a fragrance.",
+  "prod_price": "48"
+},
+{
+  "_id": {
+    "$oid": "64bec94152881c860f69221e"
+  },
+  "pic_url": "/static/prod_images/channelbleuwoman.jpg",
+  "category": "perfumes",
+  "gender": "female",
+  "prod_name": "Channel Bleu",
+  "prod_decs": "Chanel Bleu: A captivating and alluring blend of modern masculinity and classic elegance in a fragrance.",
+  "prod_price": "58"
+},
+{
+  "_id": {
+    "$oid": "64bec97152881c860f69221f"
+  },
+  "pic_url": "/static/prod_images/channelcocowoman.jpg",
+  "category": "perfumes",
+  "gender": "female",
+  "prod_name": "Channel Coco",
+  "prod_decs": "Chanel coco: A captivating and alluring blend of modern masculinity and classic elegance in a fragrance.",
+  "prod_price": "68"
+},
+{
+  "_id": {
+    "$oid": "64becb4152881c860f692222"
+  },
+  "pic_url": "/static/prod_images/digioiaarmaniwoman.jpg",
+  "category": "perfumes",
+  "gender": "female",
+  "prod_name": "Armani",
+  "prod_decs": "Armani: A captivating and alluring blend of modern masculinity and classic elegance in a fragrance.",
+  "prod_price": "45"
+},
+{
+  "_id": {
+    "$oid": "64becc5352881c860f692224"
+  },
+  "pic_url": "/static/prod_images/diorfahrenheitmen.jpg",
+  "category": "perfumes",
+  "gender": "male",
+  "prod_name": "diur",
+  "prod_decs": "diur: A captivating and alluring blend of modern masculinity and cla…",
+  "prod_price": "44"
+},
+{
+  "_id": {
+    "$oid": "64becd2452881c860f692225"
+  },
+  "pic_url": "/static/prod_images/diorhomme.jpg",
+  "category": "perfumes",
+  "gender": "male",
+  "prod_name": "diur",
+  "prod_decs": "diur: A captivating and alluring blend of modern masculinity and cla…",
+  "prod_price": "45"
+},
+{
+  "_id": {
+    "$oid": "64becd5052881c860f692226"
+  },
+  "pic_url": "/static/prod_images/diorsauvagemen.jpg",
+  "category": "perfumes",
+  "gender": "male",
+  "prod_name": "diur",
+  "prod_decs": "diur: A captivating and alluring blend of modern masculinity and cla…",
+  "prod_price": "48"
+},
+{
+  "_id": {
+    "$oid": "64becd7352881c860f692227"
+  },
+  "pic_url": "/static/prod_images/missdiorwoman.jpg",
+  "category": "perfumes",
+  "gender": "female",
+  "prod_name": "diur",
+  "prod_decs": "diur: A captivating and alluring blend of modern masculinity and cla…",
+  "prod_price": "54"
+},
+{
+  "_id": {
+    "$oid": "64becd9f52881c860f692228"
+  },
+  "pic_url": "/static/prod_images/n5channelwoman.jpg",
+  "category": "perfumes",
+  "gender": "female",
+  "prod_name": "channel",
+  "prod_decs": "Channel : A captivating and alluring blend of modern masculinity and cla…",
+  "prod_price": "50"
+},
+{
+  "_id": {
+    "$oid": "64becdd752881c860f692229"
+  },
+  "pic_url": "/static/prod_images/braceletforman.jpg",
+  "category": "accessories",
+  "gender": "male",
+  "prod_name": "Bracelet",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of elegance and personality.",
+  "prod_price": "53"
+},
+{
+  "_id": {
+    "$oid": "64bece9b52881c860f69222b"
+  },
+  "pic_url": "/static/prod_images/guccisneakerformen.jpg",
+  "category": "accessories",
+  "gender": "male",
+  "prod_name": "gucci shoes",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "50"
+},
+{
+  "_id": {
+    "$oid": "64becf4852881c860f69222c"
+  },
+  "pic_url": "/static/prod_images/laura-chouetteforwoman.jpg",
+  "category": "accessories",
+  "gender": "female",
+  "prod_name": "laura shoes",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "58"
+},
+{
+  "_id": {
+    "$oid": "64becf8e52881c860f69222d"
+  },
+  "pic_url": "/static/prod_images/mangosneakerformen.jpg",
+  "category": "accessories",
+  "gender": "male",
+  "prod_name": "Mango shoes",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "52"
+},
+{
+  "_id": {
+    "$oid": "64becfc852881c860f69222e"
+  },
+  "pic_url": "/static/prod_images/sheinbagwoman.jpg",
+  "category": "accessories",
+  "gender": "female",
+  "prod_name": "shein bag",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "49"
+},
+{
+  "_id": {
+    "$oid": "64bed02552881c860f69222f"
+  },
+  "pic_url": "/static/prod_images/sheinbraceletforwomen.jpg",
+  "category": "accessories",
+  "gender": "female",
+  "prod_name": "shein bracelet",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "47"
+},
+{
+  "_id": {
+    "$oid": "64bed05a52881c860f692230"
+  },
+  "pic_url": "/static/prod_images/yomoloszapatoswomanheelsred.jpg",
+  "category": "accessories",
+  "gender": "female",
+  "prod_name": "yomolos shoes",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "42"
+},
+{
+  "_id": {
+    "$oid": "64bed0a052881c860f692231"
+  },
+  "pic_url": "/static/prod_images/walletman.jpg",
+  "category": "accessories",
+  "gender": "male",
+  "prod_name": "wallet",
+  "prod_decs": "Stylish and versatile accessories to elevate your look with a touch of…",
+  "prod_price": "43"
+}]
