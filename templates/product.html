@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Products</title>
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/prod_style.css">
+    <!--font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/index_style.css">
+    <!--font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    // Function to advance the carousel to the next slide
+    function nextSlide() {
+      const $carousel = $("#carouselExampleCaptions");
+      const activeIndex = $carousel.find(".carousel-item.active").index();
+      const slideCount = $carousel.find(".carousel-item").length;
+      const nextIndex = (activeIndex + 1) % slideCount;
+      $carousel.carousel(nextIndex);
+    }
+
+    // Start the carousel and set the interval to 3 seconds
+    const carouselInterval = 3000; // 3 seconds
+    let intervalId = setInterval(nextSlide, carouselInterval);
+
+    // Pause the carousel when hovering over it
+    $("#carouselExampleCaptions").hover(
+      function () {
+        clearInterval(intervalId);
+      },
+      function () {
+        intervalId = setInterval(nextSlide, carouselInterval);
+      }
+    );
+  });
+</script>
+<div class="logo">
+         <a href="\index" ><img src="/static/logo/logo.png" alt="logo" width="180px"></a>
+     </div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="\index">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="\getproduct" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="\getperfumes">Perfumes</a></li>
+                  <li><a class="dropdown-item" href="\getwatches">Watches</a></li>
+                  <li><a class="dropdown-item" href="\getaccessories">Accessories</a></li>
+                  <li><a class="dropdown-item" href="\getclothes">Clothes</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="\wrapgiftform">Gift Packing</a></li>
+                </ul>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="\getmembership">Membership</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\contact">Contact</a>
+              </li>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\getfaq">FAQ</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="\logout">Logout</a>
+              </li>
+            </ul>
+              <div class="bag">
+              <a href="#"><img src="/static/logo/bag.png" height="40px"></a>
+            </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success succ" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Ad-->
+      <div class="banner">
+        <div class="container">
+            <h2 class="title">Products</h2>
+          <div class="slider-container has-scrollbar">
+            <div class="slider-item">
+              <img src="/static/images/banner1.jpg" alt="women's item" class="banner-img">
+              <div class="banner-content">
+                <p class="banner-subtitle">Trending item</p>
+                <h2 class="banner-title">Get upto 30% off on women accessories</h2>
+                <p class="banner-text">
+                  starting at &dollar; <b>20</b>.00
+                </p>
+                <a href="#" class="banner-btn">Shop now</a>
+              </div>
+            </div>
+            <div class="slider-item">
+              <img src="/static/images/banner2.jpeg" alt="modern sunglasses" class="banner-img">
+              <div class="banner-content">
+                <p class="banner-subtitle">Watches</p>
+                <h2 class="banner-title">Get upto 10% off on men watches</h2>
+                <p class="banner-text">
+                  starting at &dollar; <b>15</b>.00
+                </p>
+                <a href="#" class="banner-btn">Shop now</a>
+              </div>
+            </div>
+            <div class="slider-item">
+              <img src="https://images.unsplash.com/photo-1593487568720-92097fb460fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="new fashion summer sale" class="banner-img">
+              <div class="banner-content">
+                <p class="banner-subtitle">Sale Offer</p>
+                <h2 class="banner-title">New fashion summer sale</h2>
+                <p class="banner-text">
+                  starting at &dollar; <b>29</b>.99
+                </p>
+                <a href="#" class="banner-btn">Shop now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Shop Our Products</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://media.istockphoto.com/id/526019537/photo/hangers-with-clothes.webp?s=170667a&w=0&k=20&c=vBcPbpO8mI-sVcWZZ3WDhwrPefwrBO0MyvhKY3edkyA=" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Clothing</h5>
+              <p class="card-text">Summer has arrived shop our latest trends.</p>
+              <a href="\getclothes" class="btn btn-primary btn-shop">Shop now</a>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1601801958048-aa2e1c3e21e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHdhdGNoZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Watches</h5>
+              <p class="card-text">Shop watches from our top brands.</p>
+              <a href="\getwatches" class="btn btn-primary btn-shop">Shop now</a>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="https://plus.unsplash.com/premium_photo-1667161521640-bba57df66f29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Perfumes</h5>
+                  <p class="card-text">Shop our top perfumes for your everyday vibes!.</p>
+                  <a href="\getperfumes" class="btn btn-primary btn-shop">Shop now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFjY2Vzc29yaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Accessories</h5>
+                      <p class="card-text">Shop accessories to complete your style look.</p>
+                      <a href="\getaccessories" class="btn btn-primary btn-shop">Shop now</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+      </div>
+     <footer class="bd-footer py-4 py-md-5 mt-5 bg-dark">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+         <div class="row">
+             <div class="col-lg-3 mb-3">
+                 <a class="text-light text-decoration-none"
+                 href="\index"><span class="fs-5">Dazzlebay</span></a>
+                 <ul class= "list-unstyled small">
+                     <li class="mb-2">
+                         Dazzlebay Online shop
+                     </li>
+                     <li class="mb-2">
+                         Toronto, Ontario Canada
+                     </li>
+                      <li class="mb-2">Copyright © 2023 Dazzlebay all rights reserved</li>
+                 </ul>
+             </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3 ">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><a href="\getperfumes">Perfumes</a></li>
+                  <li class="mb-2"><a href="\getwatches">Watches</a></li>
+                  <li class="mb-2"><a href="\getaccessories">Accessories</a></li>
+                  <li class="mb-2"><a href="getclothes">Clothing</a></li>
+                  <li class="mb-2"><a href="#">Gift Packing</a></li>
+              </ul>
+          </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5>Get help</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="getfaq">FAQ</a></li>
+               <li class="mb-2"><a href="#">Shipping</a></li>
+               <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+               <li class="mb-2"><a href="#">Track your Order</a></li>
+               <li class="mb-2"><a href="#">Payment options</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+              <h5>Who we are</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="#">About Us</a></li>
+               <li class="mb-2"><a href="\getproduct">Our Products</a></li>
+               <li class="mb-2"><a href="\about">About Us</a></li>
+               <li class="mb-2"><a href="\contact">Contact Us</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-4">
+            <h5>Follow us on</h5>
+            <div class="col-6">
+                <a href="#"><img src="/static/logo/fb.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/ig.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/twitter.png" height="25px"></a>
+                <a href="#"> <img src="/static/https://th.bing.com/th/id/R.e5b63ca77feb2ad63eea28101e9168f9?rik=z2LNhlkE0nGESg&pid=ImgRaw&r=0" height="25px"></a>
+                <a href="#"> <img src="/static/logo/yt.png" height="25px"></a>
+            </div>
+          </div>
+         </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+  </html>

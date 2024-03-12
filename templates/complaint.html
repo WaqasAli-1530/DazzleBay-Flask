@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .complaints {
+      margin-top: 40px;
+    }
+
+    .complaint {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    .complaint .status {
+      font-weight: bold;
+    }
+
+    .resolved {
+      color: green;
+    }
+
+    .pending {
+      color: orange;
+    }
+
+    .closed {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Complaint Form</h1>
+    <form id="complaintForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="complaint">Complaint:</label>
+      <textarea id="complaint" name="complaint" required></textarea>
+
+      <input type="submit" value="Submit Complaint">
+    </form>
+
+    <div class="complaints">
+      <h2>Complaint Status</h2>
+      <div class="complaint">
+        <div class="status resolved">Resolved</div>
+        <div class="complaint-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </div>
+      <div class="complaint">
+        <div class="status pending">Pending</div>
+        <div class="complaint-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      </div>
+      <div class="complaint">
+        <div class="status closed">Closed</div>
+        <div class="complaint-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

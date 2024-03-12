@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/index_style.css">
+    <!--font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+  <body>
+{#    <div class="overlay" data-overlay></div>#}
+{##}
+{#      <!--- MODAL-->#}
+{#  <div class="modal" data-modal>#}
+{#    <div class="modal-close-overlay" data-modal-overlay></div>#}
+{#    <div class="modal-content">#}
+{#      <button class="modal-close-btn" data-modal-close>#}
+{#        <ion-icon name="close-outline"></ion-icon>#}
+{#      </button>#}
+{#      <div class="newsletter-img">#}
+{#        <img src="/static/images/newsletter.jpg" alt="subscribe newsletter" width="400px" height="400px">#}
+{#      </div>#}
+{#      <div class="newsletter">#}
+{#        <form action="#">#}
+{#          <div class="newsletter-header">#}
+{#            <h3 class="newsletter-title">Subscribe Newsletter.</h3>#}
+{#            <p class="newsletter-desc">#}
+{#              Subscribe the <b>Dazzlebay</b> to get latest products and discounts updates.#}
+{#            </p>#}
+{#          </div>#}
+{#          <input type="email" name="email" class="email-field" placeholder="Email Address" required>#}
+{#          <button type="submit" class="btn-newsletter">Subscribe</button>#}
+{#        </form>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+     <!--Logo-->
+     <div class="logo">
+         <a href="\index" ><img src="/static/logo/logo.png" alt="logo" width="180px"></a>
+     </div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="\index">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="\getproduct" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="\getperfumes">Perfumes</a></li>
+                  <li><a class="dropdown-item" href="\getwatches">Watches</a></li>
+                  <li><a class="dropdown-item" href="\getaccessories">Accessories</a></li>
+                  <li><a class="dropdown-item" href="\getclothes">Clothes</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="\wrapgiftform">Gift Packing</a></li>
+                </ul>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="\getmembership">Membership</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\contact">Contact</a>
+              </li>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\getfaq">FAQ</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="\logout">Logout</a>
+              </li>
+            </ul>
+              <div class="bag">
+              <a href="#"><img src="/static/logo/bag.png" height="40px"></a>
+            </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success succ" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Banner-->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active ">
+            <img src="/static/images/c1.jpeg" class="d-block w-100" alt="perfume" height="610px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="animate-in">Clothes</h5>
+              <p class="animate-in">Shop clothes from top brands</p>
+                <a href="\getclothes" ><button class="btn btn-bllock btn-primary button1">Shop Now</button></a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/c2.jpg" class="d-block w-100" alt="watch" height="610px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="animate-in">Watches</h5>
+              <p class="animate-in">Shop our best watches for your fit!</p>
+                <a href="\getwatches" ><button type="button" class="btn btn-bllock btn-primary button1">Shop Now</button></a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/c2.jpg" class="d-block w-100" alt="men and women" height="610px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="animate-in">Perfumes</h5>
+              <p class="animate-in">Shop best Perfumes for men and women</p>
+                <a href="\getperfumes" ><button class="btn btn-bllock btn-primary button1">Shop Now</button></a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Categories-->
+      <div class="small-container">
+        <h2 class="title animate-in">Categories</h2>
+        <div class="row">
+            <div class="col-4">
+            <a href="\getperfumes" target="_blank"><img src="/static/images/i1.jpeg"  alt="perfume"></a>
+            <a href="\getperfumes" target="_blank"><h4>Perfumes</h4></a>
+          </div>
+          <div class="col-4">
+            <a href="\getwatches"target="_blank"><img src="/static/images/watch.jpg" alt=""></a>
+            <a href="\getwatches"target="_blank"><h4>Watches</h4></a>
+          </div>
+          <div class="col-4">
+            <a href="\getclothes"target="_blank"><img src="/static/images/i2.jpeg"  alt=""></a>
+            <a href="\getclothes"target="_blank"><h4>Clothes</h4></a>
+          </div>
+          <div class="col-4">
+            <a href="\getaccessories"target="_blank"><img src="/static/images/i4.jpg" alt=""></a>
+            <a href="\getaccessories"target="_blank"><h4>Accessories</h4></a>
+          </div>
+          <p class="offer1 animate-in">Shop our latest products and get upto 50% discount on your first order</p>
+      </div>
+      <!--Surprising Offer-->
+      <div class="container cont1">
+          <div class="row">
+            <div class="col-2">
+              <img src="/static/images/offer.jpg" class="offer-img">
+            </div>
+            <div class="col-2">
+             <p>Gorgio Armani on Dazzlebay!</p>
+             <h1>Di Gioia</h1>
+             <small>A floral fragrance including main accords of vanilla and amber. It's fresh summer scent brings together bergamot, frangipani, iris and ambroxan.</small><br>
+             <a href="#" target="_blank" class="btn">Shop Now &#10140</a>
+            </div>
+        </div>
+      </div>
+      <!--Core-->
+      <section>
+        <article>
+            <h2>What we are selling?</h2>
+            <p>We are selling genuine products. Our first priority is to satisfy customer.</p>
+        </article>
+        <article>
+            <h2>Offers and Discounts</h2>
+            <p>We offer wide range of offers and discounts for our customers.</p>
+        </article>
+        <article>
+            <h2>Feedback</h2>
+            <p>After shop your favorite product don forget to give feedback. We love hearing from our customers and we constantly try to 
+                improve our services and products.
+            </p>
+        </article>
+    </section>
+           <!--Social Media-->
+    <h2 class="title animate-in">Read Our Blog!</h2>
+    <div class="card-group">
+      <div class="card mx-3 shadow ">
+        <img src="/static/images/blog3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Write a note about perfume.....</h5>
+          <p class="card-text">“Perfume is like a new dress, it makes you quite simply marvelous.”
+            “Perfume puts the finishing touch to elegance — a detail that subtly underscores the look, an invisible extra that completes a man and a woman’s personality. Without it, there is something missing.” </p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card mx-3 shadow ">
+        <img src="/static/images/blog3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">What are new trends in 2023?</h5>
+          <p class="card-text">In this article, we’ll cover the current fashion trends as 2023 brings some refreshing changes you’ll love to hear about.
+            For 60 years or more, the latest fashion trends were gathered from runways and fashion magazines.
+            Nowadays, social media influencers and the overall streetwear culture dictate what’s cool and fresh in fashion.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 1 hr ago</small></p>
+        </div>
+      </div>
+      <div class="card mx-3 shadow ">
+        <img src="/static/images/blog3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Daily Essentials which make you wow!</h5>
+          <p class="card-text">Accessories are important and becoming more and more important every day. They can completely change the look of an outfit, and women like the idea of having a wardrobe that's versatile.
+             For instance, a strong piece of jewelry can make a simple outfit look elegant.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <!---------brands------ -->
+    <div class="brands">
+        <div class="container small">
+            <h2 class="title animate-in">Our core Brands</h2>
+          <div class="row">
+            <div class="col-5 brand">
+              <img src="/static/logo/gucci.png">
+            </div>
+            <div class="col-5 brand">
+                <img src="/static/logo/ar.png">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/prada.jpg">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/rolex.jpg">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/dior.jpg">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/mango.jpg">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/channel.png">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/quartz.png">
+              </div>
+              <div class="col-5 brand">
+                <img src="/static/logo/rl.png">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-dark">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+         <div class="row">
+             <div class="col-lg-3 mb-3">
+                 <a class="text-light text-decoration-none"
+                 href="\index"><span class="fs-5">Dazzlebay</span></a>
+                 <ul class= "list-unstyled small">
+                     <li class="mb-2">
+                         Dazzlebay Online shop
+                     </li>
+                     <li class="mb-2">
+                         Toronto, Ontario Canada
+                     </li>
+                      <li class="mb-2">Copyright © 2023 Dazzlebay all rights reserved</li>
+                 </ul>
+             </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3 ">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><a href="\getperfumes">Perfumes</a></li>
+                  <li class="mb-2"><a href="\getwatches">Watches</a></li>
+                  <li class="mb-2"><a href="\getaccessories">Accessories</a></li>
+                  <li class="mb-2"><a href="\getclothes">Clothing</a></li>
+                  <li class="mb-2"><a href="\wrapgiftform">Gift Packing</a></li>
+              </ul>
+          </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5>Get help</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="getfaq">FAQ</a></li>
+               <li class="mb-2"><a href="#">Shipping</a></li>
+               <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+               <li class="mb-2"><a href="#">Track your Order</a></li>
+               <li class="mb-2"><a href="#">Payment options</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+              <h5>Who we are</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="\about">About Us</a></li>
+               <li class="mb-2"><a href="\getproduct">Our Products</a></li>
+               <li class="mb-2"><a href="\about">About Us</a></li>
+               <li class="mb-2"><a href="\contact">Contact Us</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-4">
+            <h5>Follow us on</h5>
+            <div class="col-6">
+                <a href="#"><img src="/static/logo/fb.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/ig.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/twitter.png" height="25px"></a>
+                <a href="#"> <img src="/static/https://th.bing.com/th/id/R.e5b63ca77feb2ad63eea28101e9168f9?rik=z2LNhlkE0nGESg&pid=ImgRaw&r=0" height="25px"></a>
+                <a href="#"> <img src="/static/logo/yt.png" height="25px"></a>
+            </div>
+          </div>
+         </div>
+      </div>
+    </footer>
+    <script>
+  $(document).ready(function () {
+    // Function to advance the carousel to the next slide
+    function nextSlide() {
+      const $carousel = $("#carouselExampleCaptions");
+      const activeIndex = $carousel.find(".carousel-item.active").index();
+      const slideCount = $carousel.find(".carousel-item").length;
+      const nextIndex = (activeIndex + 1) % slideCount;
+      $carousel.carousel(nextIndex);
+    }
+
+    // Start the carousel and set the interval to 3 seconds
+    const carouselInterval = 3000; // 3 seconds
+    let intervalId = setInterval(nextSlide, carouselInterval);
+
+    // Pause the carousel when hovering over it
+    $("#carouselExampleCaptions").hover(
+      function () {
+        clearInterval(intervalId);
+      },
+      function () {
+        intervalId = setInterval(nextSlide, carouselInterval);
+      }
+    );
+  });
+  const modal = document.querySelector('[data-modal]');
+const modalCloseBtn = document.querySelector('[data-modal-close]');
+const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
+// modal function
+const modalCloseFunc = function () { modal.classList.add('closed') }
+// modal eventListener
+modalCloseOverlay.addEventListener('click', modalCloseFunc);
+modalCloseBtn.addEventListener('click', modalCloseFunc);
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

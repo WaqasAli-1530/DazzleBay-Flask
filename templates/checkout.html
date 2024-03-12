@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'poppins', sans-serif;
+            line-height: 1.5;
+            
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .bill-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .bill-table {
+            margin-bottom: 30px;
+           
+        }
+        
+        .tamount {
+            text-align: right;
+            margin-right: 90px;
+        }
+
+        .bill-footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .brand-background {
+            background-color: darkgrey;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .brand-background h3 {
+            color: #333333;
+            margin: 0;
+        }
+
+        /* Message Styling */
+        .thank-you {
+            font-size: 18px;
+            color:#aa721eef;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        .custom-btn {
+            background-color:#333333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .custom-btn:hover {
+            background-color:#555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="bill-header">
+        <h2>Invoice</h2>
+        <h4>Date: {{ date }}</h4>
+    </div>
+
+    <div class="brand-background">
+        <h3>Dazzlebay</h3>
+    </div>
+
+    <div>
+        <h4>Customer Details:</h4>
+        <p><strong>CartID:</strong> {{ cartid }}</p>
+        <p><strong>Name:</strong> {{ username }}</p>
+        <p><strong>Address:</strong> {{ address }}</p>
+        <p><strong>Phone No:</strong> {{ phoneno }}</p>
+        <p><strong>Payment mode:</strong> {{ paymode }}</p>
+
+    </div>
+
+    <div class="bill-table">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                {% if catg == "gift" %}
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Wrapping Charges</th>
+                    <th>Total</th>
+                {% else %}
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody>
+            {% if catg == "gift" %}
+                {% for item in giftitems %}
+                    <tr>
+                        <td>{{ item.giftname }}</td>
+                        <td>$ {{ item.giftprice }}</td>
+                        <td>$ {{ item.wrapcharges }}</td>
+                        <td>$ {{ item.giftprice + item.wrapcharges }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                {% for item in cartitems %}
+                    <tr>
+                        <td>{{ item.prodname }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>$ {{ item.amount }}</td>
+                        <td>$ {{ item.amount * item.quantity }}</td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tamount">
+        <h4>Total Amount: $ {{ totalamount }}</h4>
+        <h4>Amount to Pay: $ {{ amounttopay }}</h4>
+
+    </div>
+
+    <div class="bill-footer">
+        <button type="submit" class="custom-btn"><a href="\index" class="text-light">Shop More</a></button>
+        <p class="thank-you">Thanks for shopping! Hope to see you again.</p>
+    </div>
+</div>
+</body>
+</html>

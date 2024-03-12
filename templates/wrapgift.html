@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Images</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'poppins', sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+       .logo{
+        text-align:center;
+       }
+        .message {
+            width: 100%;
+            height: 50vh;
+            background-image: url("https://images.unsplash.com/photo-1608755727748-dfa2e44f255b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.9;
+            z-index: -1;
+        }
+
+        .message-text {
+            color: mintcream;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            width: 0;
+            animation: typing 5s infinite;
+        }
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .floating-images {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .floating-images img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .floating-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="/static/images/logo1.png" width="150px">
+    </div>
+<div class="message">
+    <div class="message-text">
+        <h1>Welcome to our gift store!</h1>
+        <p>Explore our collection of Gift Wrapping.</p>
+    </div>
+</div>
+<div class="floating-images">
+    <div>
+        <a href="/wrapgiftcat?category=Birthday">
+            <img src="https://images.unsplash.com/photo-1625727297771-fc9881be6065?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                 alt="Image 1">
+        </a>
+        <div class="caption">Birthday Gift Wrapping</div>
+    </div>
+    <div>
+        <a href="/wrapgiftcat?category=Wedding">
+            <img src="https://media.istockphoto.com/id/539041723/photo/small-thank-you-gift-at-wedding-reception.webp?b=1&s=170667a&w=0&k=20&c=TgeriZjP6mzB6BgdBE1_dkuTYlFvJicYp0W3x9m7iak="
+                 alt="Image 2">
+        </a>
+        <div class="caption">Wedding Gift Wrapping</div>
+    </div>
+    <div>
+        <a href="/wrapgiftcat?category=General">
+            <img src="https://images.unsplash.com/photo-1609440077669-43eb50486c75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGdpZnRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                 alt="Image 3">
+        </a>
+        <div class="caption">General Gift Wrapping</div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

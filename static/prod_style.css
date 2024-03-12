@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins', sans-serif;
+    line-height: 1.5;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    padding-top: 20px;
+    font-size: 2rem;
+}
+.title::after{
+    content: '';
+    background:#aa721eef;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+/*Logo*/
+.logo{
+    text-align: center;
+    background-color: black;
+}
+.banner { margin: 30px 0; }
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  overflow: auto hidden;
+  scroll-snap-type: inline mandatory;
+  overscroll-behavior-inline: contain;
+}
+.slider-item {
+  position: relative;
+  min-width: 100%;
+  max-height: 450px;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.slider-item .banner-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  background: hsla(0, 0%, 100%, 0.8);
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  padding: 20px 25px;
+  border-radius:20px;
+}
+.banner-subtitle {
+  color:gray;
+  font-size: 1.1rem;
+  font-weight: 2px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.banner-title {
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.banner-text { display: none;}
+.banner-btn {
+  background:gray;
+  color: white;
+  width: max-content;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.banner-btn:hover { background: palevioletred; }
+h2{
+    color: #585757;
+    text-align: center;
+    padding-top: 10px;
+}
+/*CTA*/  
+  .btn{
+    background-color: #aa721eef;
+    border-color: #aa721eef;
+  }
+  .btn-shop:hover{
+    background-color: #a57e43ef;
+    border-color: #a57e43ef ;
+  }
+  .col-lg-3 li{
+    color:rgba(255, 255, 255, 0.89);
+  }
+  .col-6{
+    color:white;
+  }
+  .list-unstyled li a{
+    color: rgba(255, 255, 255, 0.89);
+    text-decoration: none;
+  }
+  
+
+
+
+ 
+  
+  
+  
+  

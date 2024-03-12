@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'poppins', sans-serif;
+            line-height: 1.5;
+        }
+        body {
+            background-color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            position: relative;
+        }
+        .container:before {
+            content: "";
+            background-image: url("/static/logo/shop.jpg");
+            background-repeat: no-repeat;
+            background-position: 1px;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .container h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .container h4 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .table {
+            margin-bottom: 30px;
+        }
+
+        .tamount {
+            text-align: right;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .button-des {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .button-des .left-button {
+            margin-bottom: 10px;
+            background-color: #333333;
+            border-color: #333333;
+        }
+
+        .button-des .right-button {
+            margin-bottom: 10px;
+        }
+        .right-button{
+            background-color: #333333;
+            border-color: #333333;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .payment-method label {
+            margin-right: 10px;
+        }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-input {
+            width: 40px;
+        text-align: center;
+        margin: 0 10px;
+        border: none;
+        outline: none;
+        appearance: textfield;
+        -moz-appearance: textfield;
+        -webkit-appearance: textfield;
+        }
+
+        .quantity-btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Shopping Cart</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cartitems %}
+            <tr>
+                <td>{{ item.prodname }}</td>
+                <td>$ {{ item.amount }}</td>
+                <td class="quantity-control">
+            <button class="quantity-btn" onclick="updateQuantity('{{ item.prodname }}', -1)">-</button>
+            <input type="number" name="quantity" class="quantity-input" value="{{ item.quantity }}" min="1" data-cartid="{{ item.prodname }}">
+            <button class="quantity-btn" onclick="updateQuantity('{{ item.prodname }}', 1)">+</button>
+        </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="tamount">
+        <h4>Total Amount: ${{ totalamount }}</h4>
+    </div>
+
+    <div class="button-des">
+        <a href="\index" class="btn btn-primary left-button">Shop More</a>
+        <div class="payment-method">
+            <form action="/payoptionform" method="POST">
+            <input type="hidden" id="catgInput" name="catg" value="{{catg}}">
+                <label for="payment">Payment Method:</label>
+                <select name="payment" required>
+                    <option value="" disabled selected>--- select payment option ---</option>
+                    <option value="credit_card">Credit Card</option>
+                    <option value="COD">Cash on Delivery</option>
+                </select>
+                <button type="submit" class="btn btn-primary right-button">Proceed to checkout</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+
+
+        function updateQuantity(prodname, change) {
+            let quantityInput = $(`[name="quantity"][data-cartid="${prodname}"]`);
+            let currentQuantity = parseInt(quantityInput.val());
+            let newQuantity = currentQuantity + change;
+
+            if (newQuantity >= 0) {
+                quantityInput.val(newQuantity);
+
+
+                $.ajax({
+                    url: "/api/update_quantity",
+                    method: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                                prodname: prodname,
+                                 newQuantity: newQuantity }),
+                    success: function(response) {
+                        console.log("Quantity updated successfully!");
+                    },
+                    error: function(error) {
+                        console.error("Failed to update quantity:", error);
+                    }
+                });
+            }
+        }
+
+
+        function updateCartIcon(quantity) {
+            $("#cart-icon").text(quantity);
+        }
+
+</script>
+</body>
+</html>

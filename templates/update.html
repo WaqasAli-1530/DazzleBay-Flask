@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       overflow: hidden;
+        }
+      body{
+       font-family: 'poppins', sans-serif;
+       line-height: 1.5;
+       background-image:url(images/1.jpg) ;
+       background-size: cover;
+        }
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 30px;
+            color: rgb(88, 85, 85);
+            background-color: #f1f1f1cb;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 10px;
+        }
+
+        .container h2 {
+            margin-bottom: 30px;
+            color: #333333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid palevioletred;
+            background-color: white;
+        }
+
+        .button-group {
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .button-group .btn {
+            margin-left: 10px;
+            background-color: palevioletred;
+            border-color: pink;
+        }
+
+        .error-message {
+            color:rgb(233, 58, 87);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Enter Your fields to update products</h2>
+    <form action="/updateaction" method="POST">
+        <div class="form-group">
+            <label>Product Name:</label>
+            <input type="text" name="p-name" class="form-control" required pattern="[A-Za-z]+" title="i.e enter correct name">
+        </div>
+        <div class="form-group">
+            <label for="card_name">Updated Price:</label>
+            <input type="text" name="p-price" class="form-control" required pattern="[A-Za-z]+" title="i.e enter correct name">
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn btn-primary right-button">Update</button>
+        </div>
+    </form>
+    <h2>{{ error }}</h2>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

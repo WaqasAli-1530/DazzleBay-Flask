@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .ncontainer {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .order-status {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        .status-item {
+            flex: 1;
+            color: #888;
+            position: relative;
+        }
+        .status-item.active {
+            color: #00a65a;
+            font-weight: bold;
+        }
+        .status-item.active::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: #00a65a;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            transform: translateY(-50%);
+        }
+        .status-item.completed::before {
+            content: "\2713";
+            display: block;
+            font-size: 18px;
+            color: #00a65a;
+            position: absolute;
+            top: 50%;
+            left: -14px;
+            transform: translateY(-50%);
+        }
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .product-price {
+            color: #888;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/index_style.css">
+    <!--font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="logo">
+         <a href="\index" ><img src="/static/logo/logo.png" alt="logo" width="180px"></a>
+     </div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="\index">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="\getproduct" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="\getperfumes">Perfumes</a></li>
+                  <li><a class="dropdown-item" href="\getwatches">Watches</a></li>
+                  <li><a class="dropdown-item" href="\getaccessories">Accessories</a></li>
+                  <li><a class="dropdown-item" href="\getclothes">Clothes</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Gift Packing</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Account</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success succ" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="ncontainer">
+        <ul class="order-status">
+            <li class="status-item completed">Order Placed</li>
+            <li class="status-item completed">Processing</li>
+            <li class="status-item completed">Shipped</li>
+            <li class="status-item active">Out for Delivery</li>
+            <li class="status-item">Delivered</li>
+        </ul>
+        <div class="product-list">
+            {% for x in product %}
+            <div class="product-item">
+                <div class="product-name">{{ x["prod_name"] }}</div>
+                <div class="product-price">{{ x["prod_price"] }}</div>
+                <div class="product-details">{{ x["prod_decs"] }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-dark">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+         <div class="row">
+             <div class="col-lg-3 mb-3">
+                 <a class="text-light text-decoration-none"
+                 href="\index"><span class="fs-5">Dazzlebay</span></a>
+                 <ul class= "list-unstyled small">
+                     <li class="mb-2">
+                         Dazzlebay Online shop
+                     </li>
+                     <li class="mb-2">
+                         Toronto, Ontario Canada
+                     </li>
+                      <li class="mb-2">Copyright © 2023 Dazzlebay all rights reserved</li>
+                 </ul>
+             </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3 ">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><a href="\getperfumes">Perfumes</a></li>
+                  <li class="mb-2"><a href="\getwatches">Watches</a></li>
+                  <li class="mb-2"><a href="\getaccessories">Accessories</a></li>
+                  <li class="mb-2"><a href="getclothes">Clothing</a></li>
+                  <li class="mb-2"><a href="#">Gift Packing</a></li>
+              </ul>
+          </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5>Get help</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="getfaq">FAQ</a></li>
+               <li class="mb-2"><a href="#">Shipping</a></li>
+               <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+               <li class="mb-2"><a href="#">Track your Order</a></li>
+               <li class="mb-2"><a href="#">Payment options</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+              <h5>Who we are</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="#">About Us</a></li>
+               <li class="mb-2"><a href="\getproduct">Our Services</a></li>
+               <li class="mb-2"><a href="#">Privacy Policy</a></li>
+               <li class="mb-2"><a href="#">Contact Us</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-4">
+            <h5>Follow us on</h5>
+            <div class="col-6">
+                <a href="#"><img src="/static/logo/fb.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/ig.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/twitter.png" height="25px"></a>
+                <a href="#"> <img src="/static/https://th.bing.com/th/id/R.e5b63ca77feb2ad63eea28101e9168f9?rik=z2LNhlkE0nGESg&pid=ImgRaw&r=0" height="25px"></a>
+                <a href="#"> <img src="/static/logo/yt.png" height="25px"></a>
+            </div>
+          </div>
+         </div>
+      </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

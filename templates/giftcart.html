@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'poppins', sans-serif;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            position: relative;
+        }
+        .container:before {
+            content: "";
+            background-image: url("/static/logo/shop.jpg");
+            background-repeat: no-repeat;
+            background-position: 1px;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .container h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .container h4 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .table {
+            margin-bottom: 30px;
+        }
+
+        .tamount {
+            text-align: right;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .button-des {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .button-des .left-button {
+            margin-bottom: 10px;
+            background-color: #333333;
+            border-color: #333333;
+        }
+
+        .button-des {
+            margin-bottom: 10px;
+        }
+        .btn-right{
+            background-color: #333333;
+            border-color: #333333;
+        }
+        .btn-right:hover {
+            background-color:#555;
+            border-color: #555;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .payment-method label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Gift Detail</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Recipient's Name</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Gift Wrapping Price</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in giftitems %}
+            <tr>
+                <td>{{ item.recpname }}</td>
+                <td>{{ item.giftname }}</td>
+                <td>$ {{ item.giftprice }}</td>
+                <td>$ {{ item.wrapcharges }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="tamount">
+        <h4>Total Amount:$ {{ totalamount }}</h4>
+    </div>
+
+    <div class="button-des">
+        <a href="/wrapgiftform" class="btn btn-primary left-button">Add Gifts</a>
+        <div class="payment-method">
+            <form action="/payoptionform2" method="POST">
+                 <input type="hidden" name="category" value="{{ catg }}">
+                <label for="payment">Payment Method:</label>
+                <select name="payment" required>
+                    <option value="" disabled selected>--- select payment option ---</option>
+{#                    <option value="credit_card">Credit Card</option>#}
+                    <option value="COD">Cash on Delivery</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-right">Proceed to checkout</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

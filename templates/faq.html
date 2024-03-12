@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="/static/faq_assets/css/style.css">
+  <title>FAQ</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/static/index_style.css">
+    <!--font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+<div class="logo">
+         <a href="\index" ><img src="/static/logo/logo.png" alt="logo" width="180px"></a>
+     </div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="\index">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="\getproduct" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="\getperfumes">Perfumes</a></li>
+                  <li><a class="dropdown-item" href="\getwatches">Watches</a></li>
+                  <li><a class="dropdown-item" href="\getaccessories">Accessories</a></li>
+                  <li><a class="dropdown-item" href="\getclothes">Clothes</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="\wrapgiftform">Gift Packing</a></li>
+                </ul>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="\getmembership">Membership</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\contact">Contact</a>
+              </li>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="\getfaq">FAQ</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="\logout">Logout</a>
+              </li>
+            </ul>
+              <div class="bag">
+              <a href="#"><img src="/static/logo/bag.png" height="40px"></a>
+            </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success succ" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Basics</a></li>
+		<li><a class="cd-faq__category truncate" href="#mobile">Products</a></li>
+		<li><a class="cd-faq__category truncate" href="#payments">Payments</a></li>
+		<li><a class="cd-faq__category truncate" href="#delivery">Delivery</a></li>
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+		<ul id="basics" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Basics</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How can I place an order on your website?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Placing an order on our website is quick and easy! Simply browse through our product catalog, click on the items you wish to purchase to view the product details, and click the "Add to Cart" button. Once you have added all your desired items to the cart, proceed to the checkout page to complete your order by providing your shipping address and payment information.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>What payment methods do you accept?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>We accept a variety of secure payment methods to make your shopping experience convenient. We currently accept major credit and debit cards (Visa, Mastercard, American Express, etc.), as well as digital wallets like PayPal, Apple Pay, and Google Pay. Please note that available payment options may vary based on your location.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How long will it take to receive my order?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>The delivery time may vary depending on your location and the shipping method chosen at checkout. Once your order is confirmed, we will provide you with an estimated delivery time. For standard shipping, delivery usually takes [insert number] business days. If you opt for express shipping, your order will arrive sooner. Please keep in mind that unforeseen circumstances, like holidays or weather conditions, may affect delivery times.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Is my personal information secure?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p> Absolutely! We use advanced encryption to safeguard your data and ensure secure transactions.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="mobile" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Products</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>What are the product specifications?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>You can find detailed product specifications, including dimensions, materials, and features, listed on the product page.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Is the product available in different colors/sizes?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>Yes, most products are available in various colors/sizes. Select your preferred option on the product page before adding to cart.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I care for the product?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p> Care instructions for the product can be found either on the product page or included in the packaging.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+            <li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>What is the product's warranty/guarantee?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>The product comes with a [insert duration] warranty/guarantee against manufacturing defects. Please refer to the warranty policy for more details.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="payments" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Payments</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Can I have an invoice for my subscription?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>Certainly! We provide an electronic invoice for all subscription payments. Once your payment is processed, you will receive an email with the invoice attached, or you can access it directly from your account dashboard. If you need any additional information or assistance regarding your invoice, feel free to reach out to our customer support team.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Why did my credit card or PayPal payment fail?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>There are several reasons why a payment might fail. Common reasons include insufficient funds, incorrect card details, expired card, or an issue with the PayPal account. Please double-check your payment information for accuracy and ensure sufficient funds are available. If the problem persists, you may want to contact your bank or PayPal customer support to resolve any potential issues on their end. Alternatively, you can try using a different payment method to complete your purchase. If you still encounter difficulties, don't hesitate to contact our support team for further assistance. We are here to help!</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Why does my bank statement show multiple charges for one upgrade?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>The multiple charges on your bank statement are likely temporary authorizations by your bank to verify your payment method during the upgrade process. Rest assured, only one actual charge for the upgrade will be processed, and any additional holds will be automatically released by your bank within a few days. If you encounter any issues or need further assistance, please contact our support team for prompt resolution.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="delivery" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Delivery</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>What should I do if my order hasn't been delivered yet?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>If your order hasn't been delivered within the expected timeframe, please first check the tracking information provided in your order confirmation email. Sometimes, there might be unforeseen delays in transit. If there are no updates or you have concerns, reach out to our customer support team with your order details, and we'll investigate the matter promptly. Your satisfaction is important to us, and we'll work diligently to ensure your order reaches you as soon as possible.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How can I find your international delivery information?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>To find our international delivery information, simply visit our website's shipping or delivery page. There, you'll find detailed information about the countries we ship to, estimated delivery times, and any applicable shipping fees. If you have specific questions or need further assistance regarding international shipping, feel free to contact our customer support team, and we'll be happy to help you with any queries related to shipping to your location.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Who takes care of shipping?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>We partner with reliable shipping carriers to handle the delivery of your orders. Once you place an order, our team works diligently to ensure your package is carefully packed and handed over to the designated shipping carrier. They will then be responsible for transporting your package to the delivery address provided during checkout. Rest assured, we prioritize a seamless shipping process to get your products to you in a timely and safe manner. If you have any specific delivery preferences or questions, feel free to contact our customer support team for assistance.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I use shipping profiles?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>Shipping profiles are a convenient way to streamline your shipping options for different products or locations. When placing an order, you can select the appropriate shipping profile that corresponds to your desired delivery method, shipping speed, and destination. This allows you to easily customize shipping choices based on product type or customer location. To access and manage shipping profiles, go to your account settings or checkout page, where you can view and select the applicable shipping options. If you need further guidance or have specific shipping requirements, don't hesitate to contact our support team for personalized assistance.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+
+
+
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>When will my order arrive?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>When will my order ship?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>Your order will typically ship within [insert processing time, e.g., 1-2 business days] after successful payment confirmation. Once the order is shipped, you will receive a shipping confirmation email with tracking information, allowing you to monitor the progress of your package. Please note that shipping times may vary depending on your location and the chosen shipping method. If you have any specific delivery concerns or need further assistance, feel free to contact our customer support team, and we'll be happy to assist you.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-dark">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+         <div class="row">
+             <div class="col-lg-3 mb-3">
+                 <a class="text-light text-decoration-none"
+                 href="\index"><span class="fs-5">Dazzlebay</span></a>
+                 <ul class= "list-unstyled small">
+                     <li class="mb-2">
+                         Dazzlebay Online shop
+                     </li>
+                     <li class="mb-2">
+                         Toronto, Ontario Canada
+                     </li>
+                      <li class="mb-2">Copyright © 2023 Dazzlebay all rights reserved</li>
+                 </ul>
+             </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3 ">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><a href="\getperfumes">Perfumes</a></li>
+                  <li class="mb-2"><a href="\getwatches">Watches</a></li>
+                  <li class="mb-2"><a href="\getaccessories">Accessories</a></li>
+                  <li class="mb-2"><a href="getclothes">Clothing</a></li>
+                  <li class="mb-2"><a href="#">Gift Packing</a></li>
+              </ul>
+          </div>
+             <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5>Get help</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="getfaq">FAQ</a></li>
+               <li class="mb-2"><a href="#">Shipping</a></li>
+               <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+               <li class="mb-2"><a href="#">Track your Order</a></li>
+               <li class="mb-2"><a href="#">Payment options</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+              <h5>Who we are</h5>
+              <ul class="list-unstyled">
+               <li class="mb-2"><a href="#">About Us</a></li>
+               <li class="mb-2"><a href="\getproduct">Our Services</a></li>
+               <li class="mb-2"><a href="#">Privacy Policy</a></li>
+               <li class="mb-2"><a href="#">Contact Us</a></li>
+             </ul>
+          </div>
+          <div class="col-6 col-lg-4">
+            <h5>Follow us on</h5>
+            <div class="col-6">
+                <a href="#"><img src="/static/logo/fb.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/ig.png" height="25px"></a>
+                <a href="#"> <img src="/static/logo/twitter.png" height="25px"></a>
+                <a href="#"> <img src="/static/https://th.bing.com/th/id/R.e5b63ca77feb2ad63eea28101e9168f9?rik=z2LNhlkE0nGESg&pid=ImgRaw&r=0" height="25px"></a>
+                <a href="#"> <img src="/static/logo/yt.png" height="25px"></a>
+            </div>
+          </div>
+      </div>
+    </footer>
+<script src="/static/faq_assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="/static/faq_assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
